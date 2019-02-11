@@ -70,17 +70,16 @@ exports.delete = function(req, res) {
 
   /** TODO **/
   /* Remove the article */
-  Listing.findOneAndRemove(listing.id, function(err){
-    if (err)
+  listing.remove(function(err){
+    if(err)
     {
       console.log(err);
       res.status(404).send(err);
     }
-    else
-    {
+    else {
       res.json(listing);
     }
-  })
+  });
 };
 
 /* Retreive all the directory listings, sorted alphabetically by listing code */

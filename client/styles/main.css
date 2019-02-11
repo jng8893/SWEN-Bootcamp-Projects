@@ -1,8 +1,107 @@
-#searchBar {
+/* #searchBar {
   margin: 15px 10px;
 }
 
 .tableWrapper {
   max-height: 400px;
   overflow: auto;
+} */
+
+/* Styling for common elements, major sections of webpage. */
+body {
+    background-color: #b3e6ff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#titleBackground {
+    background-color: #ffb366;
+    width: 585px;
+    font-family: 'Trebuchet MS';
+    border-radius: 10px;
+
+}
+
+.container {
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+}
+
+/* Styling for titles */
+.row {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 20px;
+}
+
+#title {
+  padding-left: 1%;
+  background-color: #ffb366;
+}
+
+
+#searchBar {
+  margin: 15px 10px;
+  width: 100%;
+  positon: sticky
+}
+
+.tableWrapper {
+  max-height: 400px;
+  overflow: auto;
+  background-color: white;
+}
+
+th {
+    background-color: #ffb366;
+}
+
+tr:hover {
+    background-color: #66ccff;
+}
+
+.listingsDisplay_row_delete {
+    padding: 10px;
+    border-radius: 50%;
+    background-image: glyphicon-remove;
+
+}
+
+#toAdd_form {
+    margin-top: 20px;
+}
+
+#add_button {
+    align-content: center;
+    border-radius: 20px;
+    border-color: #00aaff;
+    background-color: whitesmoke;
+}
+
+#delete_button {
+    align-content: center;
+    border-radius: 20px;
+    border-color: #00aaff;
+    background-color: whitesmoke;
+}
+.toAdd_textbox {
+    width: 100%;
+}
+
+input[type = text] {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.jumbotron {
+    background-color: #5cd6d6;
+    font-family: Helvetica;
+    color: aliceblue;
+    border-radius: 10px;
+}
+
+#detailedInfo {
+    font-family: 'Trebuchet MS';
 }

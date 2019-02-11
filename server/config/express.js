@@ -22,13 +22,16 @@ module.exports.init = function() {
 
   /**TODO
   Serve static files */
-  app.use(express.static('__dirname' + '/../client'));
-  app.use(express.static('__dirname' + '/../client/js'));
-  app.use(express.static('__dirname' + '/../client/js/controllers'));
-  app.use(express.static('__dirname' + '/../client/js/factories'));
-  app.use(express.static('__dirname' + '/../client/app.js'));
-  app.use(express.static('__dirname' + '/../client/styles'));
-  app.use(express.static('__dirname' + '/../client/index.html'));
+  app.use(express.static('client'));
+  // app.use(express.static('__dirname' + '/../client/js'));
+  // app.use(express.static('__dirname' + '/../client/js/controllers'));
+  // app.use(express.static('__dirname' + '/../client/js/controllers/listingController.js'));
+  // app.use(express.static('__dirname' + '/../client/js/factories'));
+  // app.use(express.static('__dirname' + '/../client/js/factories/listingFactory.js'));
+  // app.use(express.static('__dirname' + '/../client/app.js'));
+  // app.use(express.static('__dirname' + '/../client/styles'));
+  // app.use(express.static('__dirname' + '/../client/styles/main.css'));
+  // app.use(express.static('__dirname' + '/../client/index.html'));
 
 
   /**TODO
@@ -38,9 +41,12 @@ module.exports.init = function() {
 
   /**TODO
   Go to homepage for all routes not specified */
-  listingsRouter.get('/', function(req, res){
-    res.send('./index.html')
-  })
+  // listingsRouter.get('/', function(req, res){
+  //   res.send('./index.html')
+  // })
+  app.get('*', function(req, res){
+    res.redirect('../index.html');
+  });
 
   //router.getElementsByClassName('className')
 
