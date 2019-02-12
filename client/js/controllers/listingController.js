@@ -22,17 +22,13 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
         $scope.newListing = {};
 
         //Refresh listings on webpage.
-        Listings.getAll().then(function(response)
-        {
+        Listings.getAll().then(function(response){
           $scope.listings = response.data;
-        },
-        function(error)
-        {
+        }, function(error){
           console.log('Unable to retrieve listings:', error);
         });
 
-      }, function(error)
-      {
+      }, function(error) {
         if (error)
         {
           console.log('Unable to add listing:', error);
@@ -45,9 +41,11 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
         Delete the article using the Listings factory. If the removal is successful,
 		navigate back to 'listing.list'. Otherwise, display the error.
        */
+          //Delete listing at specified id.
           Listings.delete(id).then(function(response){
-            console.log("Deleted: " + id);
+            //console.log("Deleted: " + id);
 
+            //Refresh listings on webpage.
             Listings.getAll().then(function(response) {
               $scope.listings = response.data;
             }, function(error) {
@@ -57,28 +55,6 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
           }, function(error){
             console.log('Unable to retrieve listings')
           });
-
-    //    Listings.delete(id).then(function(response)
-    //    {
-    //      //Remove article from Listings at specified index.
-    //      console.log("Deleting item with id: " + id);
-    //      //Refresh listings on page.
-    //      // Listings.getAll().then(function(response) {
-    //      //   $scope.listings = response.data;
-    //      // }, function(error) {
-    //      //   console.log('Unable to retrieve listings:', error);
-    //      // });
-    //    },
-    //    function(error){
-    //      console.log('Unable to delete listing:', error);
-    //    });
-    //
-    //    Listings.getAll().then(function(response) {
-    //      $scope.listings = response.data;
-    //    }, function(error) {
-    //      console.log('Unable to retrieve listings:', error);
-    //    });
-    //
     };
 
     $scope.showDetails = function(index) {
