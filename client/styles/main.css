@@ -41,9 +41,14 @@ body {
   background-color: #ffb366;
 }
 
+#tableHeading {
+  position: sticky;
+  top: 0px;
+  background-color: #ffb366;
+}
+
 
 #searchBar {
-  margin: 15px 10px;
   width: 100%;
   positon: sticky
 }
@@ -52,14 +57,6 @@ body {
   max-height: 400px;
   overflow: auto;
   background-color: white;
-}
-
-th {
-    background-color: #ffb366;
-}
-
-tr:hover {
-    background-color: #66ccff;
 }
 
 .listingsDisplay_row_delete {
@@ -93,13 +90,27 @@ tr:hover {
 input[type = text] {
     width: 100%;
     border-radius: 4px;
+
+}
+
+.col-md-6 {
+  background-color: #5cd6d6;
+  font-family: Helvetica;
+  padding: 20px;
+}
+#tableSection {
+  border-radius: 50px 0px 50px 50px;
+}
+
+#detailedInfoSection {
+  border-radius: 0px 50px 50px 0px;
 }
 
 .jumbotron {
     background-color: #5cd6d6;
+    border-color: #3399ff;
+    border-width: thick;
     font-family: Helvetica;
-    color: aliceblue;
-    border-radius: 10px;
 }
 
 #detailedInfo {
